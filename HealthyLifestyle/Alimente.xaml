@@ -3,10 +3,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HealthyLifestyle.Alimente"
              Title="Alimente">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
+    <ScrollView>
+        <StackLayout
+            Spacing="25"
+            Padding="30,0"
+            >
+
+            <Label
+                Text="Alimente"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="24"
+                HorizontalOptions="Center" />
+
+            <ListView IsRefreshing="True"
+                x:Name="listViewAlimente" 
+                HorizontalOptions="Center">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <HorizontalStackLayout Padding="8">
+                                <Label Text="{Binding name, StringFormat=' Name = {0} '}" VerticalOptions="Center"/>
+                                <Label Text="{Binding carbohydrates, StringFormat=' Carbohydrates = {0} '}" VerticalOptions="Center"/>
+                                <Label Text="{Binding protein, StringFormat=' Protein = {0} '}" VerticalOptions="Center"/>
+                                <Label Text="{Binding fat, StringFormat=' Fat = {0} '}" VerticalOptions="Center"/>
+                                <Label Text="{Binding calories, StringFormat=' Calories =  {0} '}" VerticalOptions="Center"/>
+                                <Label Text="{Binding sugar, StringFormat=' Sugar = {0} '}" VerticalOptions="Center"/>
+                            </HorizontalStackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button 
+            Text="Sterge informatii din baza de date"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+            Clicked="Button_Clicked"/>
+        </StackLayout>
+        
+    </ScrollView>
+    
+
 </ContentPage>
