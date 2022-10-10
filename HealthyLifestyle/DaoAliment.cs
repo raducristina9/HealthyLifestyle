@@ -10,7 +10,6 @@ namespace HealthyLifestyle
     public class DaoAliment
     {
         SQLiteConnection connection;
-        /*SQLiteAsyncConnection*/
 
         public DaoAliment()
         {

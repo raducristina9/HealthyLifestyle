@@ -2,8 +2,16 @@ namespace HealthyLifestyle;
 
 public partial class Parcuri : ContentPage
 {
-	public Parcuri()
-	{
-		InitializeComponent();
-	}
+    List<Parc> listaCuParcuri = new List<Parc>();
+    public Parcuri()
+    {
+        InitializeComponent();
+    }
+
+    protected override async void OnAppearing()
+    {
+        listaCuParcuri = await ServiceParc.getDataAsync();
+        listViewParcuri.ItemsSource = listaCuParcuri;
+    }
+
 }
