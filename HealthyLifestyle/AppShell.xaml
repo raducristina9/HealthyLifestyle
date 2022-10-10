@@ -3,11 +3,47 @@
     x:Class="HealthyLifestyle.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:HealthyLifestyle"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:local="clr-namespace:HealthyLifestyle">
 
-    <ShellContent
+    <FlyoutItem Title="Healthy Lifestyle">
+        <ShellContent
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
-
+    </FlyoutItem>
+    <FlyoutItem Title="Alimente">
+        <ShellContent
+        ContentTemplate="{DataTemplate local:Alimente}"
+        Route="Alimente" />
+    </FlyoutItem>
+    <FlyoutItem Title="Parcuri">
+        <ShellContent
+        ContentTemplate="{DataTemplate local:Parcuri}"
+        Route="Parcuri" />
+    </FlyoutItem>
+    <FlyoutItem Title="Calculator Kcal">
+        <ShellContent
+        ContentTemplate="{DataTemplate local:CalculatorKcal}"
+        Route="CalculatorKcal" />
+    </FlyoutItem>
+    <FlyoutItem Title="Categorii Alimente">
+        <ShellContent
+        ContentTemplate="{DataTemplate local:CategoriiAlimente}"
+        Route="CategoriiAlimente" />
+    </FlyoutItem>
+    <FlyoutItem Title="Categorii Parcuri">
+        <ShellContent
+        ContentTemplate="{DataTemplate local:CategoriiParcuri}"
+        Route="CategoriiParcuri" />
+    </FlyoutItem>
+    <FlyoutItem Title="Despre">
+        <ShellContent
+        ContentTemplate="{DataTemplate local:Despre}"
+        Route="Despre" />
+    </FlyoutItem>
+    <FlyoutItem Title="Setari">
+        <ShellContent
+        ContentTemplate="{DataTemplate local:Setari}"
+        Route="Setari" />
+    </FlyoutItem>
+    
 </Shell>
