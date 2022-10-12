@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HealthyLifestyle.CategoriiAlimente"
              xmlns:local="clr-namespace:HealthyLifestyle"
-             Title="Grafic Alimente">
+             Title="Numarul de calorii din alimente">
     <VerticalStackLayout>
         <Label 
-            Text="Numarul de calorii al diferitelior alimente"
+            Text="Numarul de calorii al diferitelor alimente"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
         <local:ChartView x:Name="chartViewAlimente" VerticalOptions="FillAndExpand" HeightRequest="300" WidthRequest="500" />
