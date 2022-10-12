@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HealthyLifestyle"
              x:Class="HealthyLifestyle.CategoriiParcuri"
-             Title="CategoriiParcuri">
+             Title="Grafic Parcuri">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Suprafata parcurilor din Bucuresti"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <local:ChartView x:Name="chartViewParcuri" VerticalOptions="FillAndExpand" HeightRequest="300" />
     </VerticalStackLayout>
 </ContentPage>

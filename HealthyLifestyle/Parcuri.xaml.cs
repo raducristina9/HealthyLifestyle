@@ -10,8 +10,9 @@ public partial class Parcuri : ContentPage
 
     protected override async void OnAppearing()
     {
-        listaCuParcuri = await ServiceParc.getDataAsync();
-        listViewParcuri.ItemsSource = listaCuParcuri;
+        listaCuParcuri = await ServiceParc.preiaParcuri();
+        collectionViewParcuri.ItemsSource = listaCuParcuri;
+
     }
 
 }

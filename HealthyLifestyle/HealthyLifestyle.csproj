@@ -49,6 +49,21 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\gradinabotanica.jpg" />
+	  <None Remove="Resources\Images\parculalexandruioancuza.jpg" />
+	  <None Remove="Resources\Images\parculcaroli.jpg" />
+	  <None Remove="Resources\Images\parculcircului.jpg" />
+	  <None Remove="Resources\Images\parculcismgiu.jpg" />
+	  <None Remove="Resources\Images\parculdrumultaberei.jpg" />
+	  <None Remove="Resources\Images\parculherastrau.jpg" />
+	  <None Remove="Resources\Images\parculkiseleff.jpg" />
+	  <None Remove="Resources\Images\parculnational.jpg" />
+	  <None Remove="Resources\Images\parcultineretului.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microcharts" Version="0.9.5.9" />
+	  <PackageReference Include="SkiaSharp.Views.Maui.Controls" Version="2.88.3" />
 	  <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
 	  <PackageReference Include="SQLitePCLRaw.provider.dynamic_cdecl" Version="2.1.2" />
 	</ItemGroup>

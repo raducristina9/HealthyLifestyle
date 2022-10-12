@@ -15,20 +15,32 @@
                 FontSize="24"
                 HorizontalOptions="Center" />
 
-            <ListView IsRefreshing="True"
-                x:Name="listViewParcuri" 
-                HorizontalOptions="Center">
-                <ListView.ItemTemplate>
+            <CollectionView  
+              Grid.ColumnSpan="2"
+            SelectionMode="None"
+                x:Name="collectionViewParcuri">
+                <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
-                            <HorizontalStackLayout Padding="8">
-                                <Label Text="{Binding denumire, StringFormat=' Name = {0} '}" VerticalOptions="Center"/>
-                                <Label Text="{Binding hectare, StringFormat=' Hectare = {0} '}" VerticalOptions="Center"/>
-                            </HorizontalStackLayout>
-                        </ViewCell>
+                        <Grid Padding="10">
+                            <Frame HeightRequest="125" >
+                                <Grid Padding="8" ColumnDefinitions="125,*">
+                                    <Image Aspect="AspectFill" 
+                                       WidthRequest="125"
+                                       HeightRequest="125"
+                                       Source="{Binding poza}"/>
+                                    <VerticalStackLayout
+                                    VerticalOptions="Center"
+                                    Grid.Column="1"
+                                    Padding="10">
+                                        <Label Text="{Binding denumire}" FontAttributes="Bold" />
+                                        <Label Text="{Binding hectare}" FontAttributes="Italic"/>
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+                        </Grid>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </StackLayout>
 
     </ScrollView>
