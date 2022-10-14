@@ -49,6 +49,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\background.png" />
+	  <None Remove="Resources\Images\desprelogo.png" />
 	  <None Remove="Resources\Images\gradinabotanica.jpg" />
 	  <None Remove="Resources\Images\parculalexandruioancuza.jpg" />
 	  <None Remove="Resources\Images\parculcaroli.jpg" />
