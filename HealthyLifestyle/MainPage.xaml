@@ -22,6 +22,18 @@
                 FontAttributes="Italic"
                 TextColor="Green"
                 HorizontalOptions="Center"/>
+            <Button 
+            Text="Calculeaza kcal"
+             VerticalOptions="Center"
+             HorizontalOptions="Center"
+             Grid.Row="1"
+            Clicked="Button_Clicked"/>
+            <Button 
+            Text="Verifica  grafic kcal"
+             VerticalOptions="Center"
+             HorizontalOptions="Center"
+            Grid.Row="2"
+            Clicked="Button_Clicked_1"/>
         </StackLayout>
     </ScrollView>
 
