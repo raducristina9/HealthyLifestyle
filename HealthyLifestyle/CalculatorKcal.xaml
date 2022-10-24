@@ -4,7 +4,7 @@
              x:Class="HealthyLifestyle.CalculatorKcal"
              Title="CalculatorKcal">
     
-    <Grid RowDefinitions="*,*,*,*,*,*,*,*" Padding="8" RowSpacing="40" ColumnSpacing="8">
+    <Grid RowDefinitions="*,*,*,*,*,*,*,*" Padding="8" RowSpacing="40" ColumnSpacing="5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -15,7 +15,7 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             SemanticProperties.HeadingLevel="Level1"
-            FontSize="24"
+            FontSize="20"
             Grid.ColumnSpan="3"/>
         <Label 
             VerticalOptions="Center" 
@@ -93,7 +93,7 @@
             Text="kilocalorii consumate"
             Grid.Row="5"
             Grid.Column="2"/>
-        <HorizontalStackLayout Grid.Row="6" VerticalOptions="Center" HorizontalOptions="EndAndExpand">
+        <HorizontalStackLayout Grid.Row="6" VerticalOptions="Center" HorizontalOptions="Center">
             <Label 
             Margin="10"
             Text="Daca alergi "/>
@@ -103,20 +103,26 @@
             TextChanged="entryNrKm_TextChanged"
             Margin="10"
                 />
-            <Label 
+        </HorizontalStackLayout>
+        <Label 
+            Grid.Row="6"
+            Grid.Column="1"
+            HorizontalOptions="Center"
             Margin="10"
             Text=" km cu o viteza "/>
-        </HorizontalStackLayout>
         <Picker 
             x:Name="pickerViteza"
             Grid.Row="6"
-            Grid.Column="1"
+            Grid.Column="2"
             VerticalOptions="CenterAndExpand"
+            HorizontalOptions="Center"
             SelectedIndexChanged="pickerViteza_SelectedIndexChanged"/>
-        <HorizontalStackLayout Grid.Row="7" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="EndAndExpand">
         <Label 
+            Grid.Row="7"
             Margin="10"
+            HorizontalOptions="Center"
             Text=" vei consuma estimativ "/>
+        <HorizontalStackLayout Grid.Row="7" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center">
             <Entry 
             x:Name="entryRezultat2"
             IsReadOnly="True"
@@ -131,6 +137,7 @@
             Grid.Row="7"
             Grid.Column="2"
             VerticalOptions="Center"
+            HorizontalOptions="Center"
             SelectedIndexChanged="pickerUnitateTimp_SelectedIndexChanged"/>
     </Grid>
 </ContentPage>
